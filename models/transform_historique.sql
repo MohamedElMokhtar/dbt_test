@@ -21,7 +21,7 @@ with combined as (
 
 select
     *,
-    src || '_' || customerid as src_id
+    src || '_' || id as src_id
 from combined
 {% if is_incremental() %}
   where _ab_cdc_updated_at >
