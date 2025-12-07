@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: ahs_historique
+      - name: csm_historique
+      - name: ahs_p_eau
+      - name: csm_p_eau
+
+models:
+  - name: transform_historique
+    description: "consolidated data"
+    config:
+      schema: test
+      alias: fact_historique
+
+  - name: transform_p_eau
+    description: "consolidated data"
+    config:
+      schema: test
+      alias: fact_p_eau
+
